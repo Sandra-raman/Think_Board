@@ -52,7 +52,6 @@ export async function deleteNote(req,res){
     try {
         const deletedNote= await Note.findByIdAndDelete(req.params.id)
         if(!deletedNote) return res.status(404).json({message:"Note not found"});
-        res.json("delete successfully")
         res.status(200).json({message:"You deleted the note"})
     } catch (error) {
         console.error("Error in deleteNotes",error)
