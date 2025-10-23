@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix Backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "build": "cd frontend && npm ci && npm run build",
     "start": "npm run start --prefix Backend "
 
   },
