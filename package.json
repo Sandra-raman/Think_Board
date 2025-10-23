@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && npm ci && npm run build",
-    "start": "npm run start --prefix Backend "
-
+    "build": "npm ci --prefix Backend && npm ci --prefix frontend && npm run build --prefix frontend",
+    "start": "npm start --prefix Backend"
   },
   "repository": {
     "type": "git",
@@ -15,7 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Sandra-raman/Think_Board/issues"
   },
